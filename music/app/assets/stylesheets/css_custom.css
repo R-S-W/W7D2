@@ -1,0 +1,68 @@
+
+
+body  {
+    padding: 50px;
+    background-color: #3a7ec2ee;
+    font-family: 'Yatra One', cursive;
+    font-size: 20px; 
+
+}
+
+header {
+    font-family: 'Monoton', cursive;
+    font-style: initial;
+    font-size: 60px;
+    color: skyblue;
+
+    float: left;
+}
+
+h1 {
+    font-family: 'Black Ops One', cursive;
+}
+
+
+button {
+    height: 50px;
+    width : 100px;
+    border-radius: 10px;
+    background:#46d4bfd0;
+    color: #ffffffee;
+    font-family: 'Black Ops One', cursive;
+    /* font-family: 'Red Rose', cursive; */
+    font-size: 18px;
+}
+
+/* #login_info {
+
+} */
+
+#logout_form {
+    float: right;
+    /* flex-direction: row; */
+    /* align-items: right; */
+
+
+}
+
+#logout_form_signup_button {
+    margin-top: 25px;
+    
+}
+
+
+.filler {
+
+    height:60px;
+    width: 100px;
+    background-color: yellow;
+    display: block;
+}
+
+
+section:after {
+    content: "";
+    display: block;
+    clear: both;
+
+}

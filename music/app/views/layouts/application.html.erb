@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html>
+ 
   <head>
     <title>Music</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= #javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    
+    <!--<%#= stylesheet_link_tag "css_custom.css" %> I don't need this now.  Just add .css to app/assets/stylesheets-->
+    <!-- <link rel = "stylesheet" href = "./assets/css_custom.css" type =  "text/css" /> -->
   </head>
 
+
   <body>
+    <section>
+      <header>MUSIC APP</header>
+  
+      
+      <%if logged_in?%>
+        <ul id = "login_info">
+          <li>Logged in as: <%=@user.email%></li>
+          <li>
+            <form action = "<%=session_url%>" method = 'POST'>
+              <input type = 'hidden'
+                name = 'authenticity_token'
+                value= '<%=form_authenticity_token%>'
+              >
+              <input type = 'hidden' value = 'DELETE' name = '_method' >
+              <input type= 'submit' value = "Logout">
+            </form>
+          </li>
+        </ul>
+      <%else%>
+        <!--<form action = <%= new_session_url%> method = "GET" >
+          <button>Login</button>
+        </form> -->
+        <form id = 'logout_form' action = <%= new_user_url%> method = "GET">
+        <button id = "logout_form_signup_button">SIGN UP</button>
+        </form>
+
+      <%end%>
+
+
+
+    </section>
     <%= yield %>
+
   </body>
 </html>

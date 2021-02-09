@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+
+
+Band.create(name: "The Rolling Stones")
+Band.create(name: "The Beatles")
+Band.create(name: "Jo Mama")
+Band.create(name: "Thundercat")
+Band.create(name: "The Quintet of the Hotclub of France")
+Band.create(name: "Tatsuro Yamashita")
